@@ -62,10 +62,16 @@ GEM
       treetop (~> 1.4.8)
     mime-types (1.19)
     multi_json (1.3.6)
+    nokogiri (1.5.5)
     polyglot (0.3.3)
     rack (1.4.1)
     rack-cache (1.2)
       rack (>= 0.4)
+    rack-linkify (0.0.2)
+      rack-plastic (>= 0.1.1)
+    rack-plastic (0.1.3)
+      nokogiri (~> 1.4)
+      rack (~> 1.0)
     rack-ssl (1.3.2)
       rack
     rack-test (0.6.2)
@@ -117,6 +123,7 @@ DEPENDENCIES
   coffee-rails (~> 3.2.1)
   debugger
   jquery-rails
+  rack-linkify
   rails (= 3.2.8)
   sass-rails (~> 3.2.3)
   sqlite3

@@ -1,4 +1,6 @@
 class FollowsController < ApplicationController
+  before_filter :require_user
+
   def create
     begin
       @user = User.first # this will change once we add login
@@ -11,7 +13,7 @@ class FollowsController < ApplicationController
       logger.debug e.message
     end
   end
-  
+
   def destroy
     begin
       @user = User.first # this will change once we add login

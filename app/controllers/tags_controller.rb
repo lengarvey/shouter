@@ -1,4 +1,6 @@
 class TagsController < ApplicationController
+  before_filter :require_user
+
   def show
     @tag = Tag.find_by_name(params[:name].downcase)
     redirect_to root_path and return unless @tag
